@@ -59,6 +59,8 @@ module SimpleTokenAuthentication
         # for every request. That behaviour can be configured through
         # the sign_in_token option.
         sign_in entity, store: SimpleTokenAuthentication.sign_in_token
+      else
+        head :unauthorized
       end
     end
 
